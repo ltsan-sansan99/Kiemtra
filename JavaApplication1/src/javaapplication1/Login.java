@@ -5,6 +5,8 @@
  */
 package javaapplication1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DELL
@@ -40,6 +42,11 @@ public class Login extends javax.swing.JFrame {
         txtpassw.setText("password");
 
         btnlogin.setText("Login");
+        btnlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnloginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,6 +86,18 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
+        // TODO add your handling code here:
+        if(txtuser.getText().equals("admin")&& txtpass.getText().equals("admin"))
+        {
+            JOptionPane.showMessageDialog(null, "Dang nhap thanh cong", "Thong bao", JOptionPane.ERROR_MESSAGE);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Dang nhap that bai", "Thong bao", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnloginActionPerformed
 
     /**
      * @param args the command line arguments
