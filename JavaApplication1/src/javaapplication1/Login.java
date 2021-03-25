@@ -5,6 +5,7 @@
  */
 package javaapplication1;
 
+import java.awt.Frame;
 import javax.swing.JOptionPane;
 
 /**
@@ -92,6 +93,10 @@ public class Login extends javax.swing.JFrame {
         if(txtuser.getText().equals("admin")&& txtpass.getText().equals("admin"))
         {
             JOptionPane.showMessageDialog(null, "Dang nhap thanh cong", "Thong bao", JOptionPane.ERROR_MESSAGE);
+            this.setVisible(false);
+            Frame a=new ThanhCong();
+            a.setVisible(true);
+            
         }
         else
         {
